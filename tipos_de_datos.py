@@ -57,7 +57,7 @@ apellido2=apellido.strip()
 solo letras mayúsculas.
 """
 
-apellido_es_mayuscula= apellido2.islower()
+apellido_es_mayuscula= apellido2.isupper()
 #print(apellido_es_mayuscula)
 
 """Convertir la variable `apellido2` de mayúsculas a minúsculas si está en mayúsculas, 
@@ -82,16 +82,20 @@ apellido_end_ez=apellido2.endswith('ez')
 al 23 (en orden invertido), saltandose de a 1 elemento (49, 47, 45 , etc) de la
 lista `apellidos_list`.
 """
-apellidos_tuple=tuple()
-apellidos_tuple=apellidos_list[-23:-100:-2]
+
+#apellidos_tuple=apellidos_list[-23:-100:-2]
 #print(apellidos_tuple)
+apellidos_tuple=tuple(apellidos_list[49:22:-2])
+#print(apellidos_tuple)
+
 
 
 """Crear variable `apellidos_list2` que contenga una copia de `apellidos_tuple` 
 (con las conversiones que sean necesarias) y agregarle el elemento de la 
 posición 78 de la lista `apellidos_list`.
 """
-apellidos_list2=apellidos_tuple
+apellidos_list2=list(apellidos_tuple)
+#print(apellidos_list2)
 apellidos_list2.append(apellidos_list[78])
 #print(apellidos_list2)
 
@@ -102,36 +106,42 @@ apellidos_list2[3]
 
 """Eliminar el elemento igual a "  MORALES" de la variable `apellidos_list2`.
 """
-
+apellidos_list2.remove('  MORALES')
+#print(apellidos_list2)
 
 """Agregar (concatenar) a la variable `apellidos_list2`, la lista obtenida del
 elemento 56 al 70 de la variable `apellidos_list`.
 """
-
+apellidos_list2.append(apellidos_list[50:71])
+#print(apellidos_list2)
 
 """Invertir el orden actual de la variable `apellidos_list2`.
 """
-
+apellidos_list2.reverse()
+#print(apellidos_list2)
 
 """Crear variable `apellidos_set1` con los elementos del 56 al 66 de la 
 variable `apellidos_list`, y crear variable `apellidos_set2` con elementos del 
 62 al 76 de la variable `apellidos_list`.
 """
+apellidos_set1=apellidos_list[56:67]
+apellidos_set1=apellidos_list[62:77]
 
 
 """Agregar a variable `apellidos_set1` el elemento en la pocisión 67 de la 
 variable `apellidos_list`.
 """
-
+apellidos_set1.append(apellidos_list[67])
 
 """Agregar a variable `apellidos_set1` los elementos del 68 al 70 de la 
 variable `apellidos_list`.
 """
-
+apellidos_set1.append(apellidos_list[67:70])
 
 """Eliminar el elemento " CAMPOS  " de la variable `apellidos_set1`.
 """
-
+print(apellidos_set1)
+print(apellidos_set1[13])
 
 """Crear la variable `apellidos_set3` con la intersección entre `apellidos_set1` 
 y `apellidos_set2`.

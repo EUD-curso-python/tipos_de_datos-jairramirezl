@@ -171,13 +171,13 @@ apellidos_set5 = apellidos_set1 ^ apellidos_set2
 """Crear la variable `var3` con la respuesta a la pregunta de si `apellidos_set3` 
 es un subconjunto de `apellidos_set1`.
 """
-var3=apellidos_set3.issuperset(apellidos_set1)
+var3=apellidos_set3.issubset(apellidos_set1)
 
 """Crear la variable `apellidos_dict` usando la función `fromkeys` con la lista
 del 0 al 4 de la lista `apellidos_lista`.
 """
 apellidos_dict=dict.fromkeys(apellidos_list[0:5]) 
-print(apellidos_dict)
+#print(apellidos_dict)
 
 """Agregar el siguiente diccionario: {"key1": 12, "key2": 24} al diccionario  
 `apellidos_dict`.
@@ -189,7 +189,7 @@ apellidos_dict.update({"key1": 12, "key2": 24})
 `apellidos_dict`.
 """
 apellidos_dict['gonzalez']=34
-print(apellidos_dict)
+
 """Sacar el valor de la llave "gonzalez" del diccionario `apellidos_dict` y 
 guardarlo en la variable `apellido_gonzalez`.
 """
@@ -202,5 +202,5 @@ apellidos_dict.popitem()
 """Sacar el valor de la llave "no_existe" del diccionario `apellidos_dict` y 
 guardarlo en la variable `apellido_none`.
 """
-apellido_none=apellidos_dict.setdefault('no_existe', 6)
+apellido_none=apellidos_dict.setdefault('no_existe', None)
 

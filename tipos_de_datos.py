@@ -69,7 +69,7 @@ apellido3=apellido2.upper()
 """Crear variable `a_in_apellido` que contenga la cantidad de letras a que contiene 
 la variable `apellido2`.
 """
-a_in_apellido=len(apellido2)
+a_in_apellido=apellido2.count('a')
 #print(a_in_apellido)
 
 """Crear variable `apellido_end_ez` que contenga si la variable `apellido2` 
@@ -95,7 +95,7 @@ apellidos_tuple=tuple(apellidos_list[49:22:-2])
 posición 78 de la lista `apellidos_list`.
 """
 apellidos_list2=list(apellidos_tuple)
-apellidos_list2.extend(apellidos_list[78])
+apellidos_list2.append(apellidos_list[78])
 #tuple(apellidos_list2)
 
 """Eliminar el 4 elemento de la variable `apellidos_list2`.
@@ -193,7 +193,7 @@ apellidos_dict['gonzalez']=34
 """Sacar el valor de la llave "gonzalez" del diccionario `apellidos_dict` y 
 guardarlo en la variable `apellido_gonzalez`.
 """
-apellido_gonzalez=apellidos_dict.pop('gonzalez')
+apellido_gonzalez=apellidos_dict.pop('gonzalez',None)
 
 """Eliminar el último elemento del diccionario `apellidos_dict`.
 """
@@ -202,5 +202,6 @@ apellidos_dict.popitem()
 """Sacar el valor de la llave "no_existe" del diccionario `apellidos_dict` y 
 guardarlo en la variable `apellido_none`.
 """
-apellido_none=apellidos_dict.setdefault('no_existe', None)
+#apellido_none=apellidos_dict.setdefault('no_existe', None)
+apellido_none=apellidos_dict.pop('no_existe', None)
 
